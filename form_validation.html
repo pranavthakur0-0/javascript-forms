@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+    body {
+        background: linear-gradient(-45deg, #141414, #494949, #060606, #424242);
+        background-size: 400% 400%;
+        animation: gradient 25s ease infinite;
+        height: 100vh;
+        
+    }
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+    *{
+        margin: 0px;
+        font-family: 'Comic Neue', cursive!important;
+        
+    }
+    .container
+    {
+        height: 100vh;
+        width: 100vw;
+        background-color:none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-container
+    {
+        height: 80vh;
+        width: 70vw;
+        background-color: aliceblue;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        display: flex;
+
+    }
+    .form-container-one
+    {
+        height: 100%;
+        width: 50%;
+        background-color: #000000;
+        background-image: url(./mars.jpeg);
+    
+        background-repeat: no-repeat;
+        
+        background-position:center;
+        background-size: 300px;
+    }
+
+    .form-container-two
+    {
+        height: 100%;
+        width: 50%;
+        background-color: #202123;
+    }
+    .form-container-one-logo
+    {
+        height: 30%;
+        width: 100%;
+        background-image: url(./new.png);
+        background-size: 130px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .form-container-one-text
+    {
+        height: 75%;
+        width: 100%;
+        display: flex;
+        align-items:flex-end;
+    }
+    .form-container-one-text-write
+    {
+        height: 40%;
+        width: 100%;
+        color: white;
+        font-family: sans-serif;
+        background-image: url(./Untitled\ 1.png);
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .form-container-two-heading
+    {
+        height: 10%;
+        width: 100%;
+        padding-top: 10%;
+        text-align: center;
+        font-weight: 400;
+        color: white;
+        font-size: 30px;
+
+        
+    }
+    .form-container-two-form
+    {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+      label {
+        width: 83%;
+        overflow: hidden;
+      }
+      .fields {
+        color: #646c70;
+        border: none;
+        outline: none;
+        padding: 30px 0px 10px 0px ;
+        width: 17vw;
+        background: transparent;
+        border-bottom: solid 1px rgb(76, 76, 76);
+      }
+      .fields + span {
+        display: block;
+        position: relative;
+        border-bottom: solid 2px #ffffff;
+        
+        width: 0;
+        top: -1px;
+        -webkit-transition: width 0.5s  ease-in-out;
+        transition: width 0.5s  ease-in-out;
+      }
+      .fields:focus + span {
+        width: 100%;    
+        color: white!important;
+        
+        -webkit-transition: width 0.5s ease-in-out;
+        transition: width 0.5s  ease-in-out;
+      }
+      .fields:focus
+      {
+          color: white!important;
+          border-bottom: solid 1px rgb(76, 76, 76);
+          
+      }
+
+      .form-container-two-form-one
+      {
+        height: 80%;
+        width: 100%;
+      }
+
+      .form-container-two-form-two
+      {
+          height: 10vh;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .submit-bt
+      {
+          height: 40px;
+          width: 100px;
+          border-radius: 10px;
+          border: 0px;
+          background-color: #282828;
+          color: white;
+          
+          
+      }
+      .submit-bt:hover
+      {
+          transform: scale(1.1);
+          transition: 0.2s all ease-in-out;
+          background-color: #000000;
+          box-shadow: rgba(80, 80, 80, 0.35) 0px 5px 15px;
+          color: white;
+      }
+
+
+      ::placeholder 
+      { 
+        color: rgb(172, 172, 172);
+        opacity: 1; 
+      }
+
+
+
+</style>
+<body>
+
+    <div class="container">
+        <div class="form-container">
+            
+            <div class="form-container-one">
+                <div class="form-container-one-logo"></div>
+                <div class="form-container-one-text">
+                    <div class="form-container-one-text-write">
+                      
+                    </div>
+                </div>
+            </div>
+           
+            <div class="form-container-two">
+                    <div class="form-container-two-heading">
+                        Sign up
+                    </div>
+                    <div class="form-container-two-form">
+                        <form action="" onsubmit="checkfun()">
+                         <div class="form-container-two-form-one">
+                        <label>
+                            <input class="fields" id="username" type="text" placeholder="Username" autocomplete="off">
+                            <span></span>
+                        </label>
+                        <label>
+                            <input class="fields" id="email" type="email" placeholder="Email" autocomplete="off">
+                            <span></span>
+                          </label>
+                          <label>
+                            <input class="fields" id="password" type="password" placeholder="Password" autocomplete="off">
+                            <span></span>
+                          </label>
+                          <label>
+                            <input onchange="myFunction()" class="fields" id="number" type="number" placeholder="Number" autocomplete="off">
+                            <span></span>
+                          </label>
+                        </div>
+                        <div class="form-container-two-form-two">
+
+                            
+                            <input id="buttton" class="submit-bt" type="submit" value="Submit">
+                        </div>
+                        
+                          </form> 
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    function checkfun()
+    {
+
+    }
+
+    function myFunction()
+    {
+        value = document.getElementById("number").value;
+        if(value < 10 && value >10)
+        {
+            
+        }
+    }
+
+</script>
+</html>
